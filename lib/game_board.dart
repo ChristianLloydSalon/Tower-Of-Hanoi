@@ -11,16 +11,16 @@ class GameBoard extends StatefulWidget {
 
 class GameBoardState extends State<GameBoard> {
   static List<Tower> towers = [
-    Tower(
+    const Tower(
       color: Colors.cyan,
       blocks: [
-        const Block(type: BlockType.large),
-        const Block(type: BlockType.medium),
-        const Block(type: BlockType.small),
+        Block(type: BlockType.large),
+        Block(type: BlockType.medium),
+        Block(type: BlockType.small),
       ],
     ),
-    Tower(color: Colors.indigo, blocks: []),
-    Tower(color: Colors.deepOrangeAccent, blocks: []),
+    const Tower(color: Colors.indigo, blocks: []),
+    const Tower(color: Colors.deepOrangeAccent, blocks: []),
   ];
 
   void moveBlock(int fromTowerIndex, int toTowerIndex) {
